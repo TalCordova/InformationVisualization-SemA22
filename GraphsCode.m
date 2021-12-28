@@ -39,9 +39,9 @@ for i=1:3:12
     A3 = polyval(a3,trend3{:,5});
     gscatter(x,y,g, 'rgb');
     hold on
-    plot(trend1{:,5},A1, 'LineWidth', 2, 'color', 'r');
-    plot(trend2{:,5},A2, 'LineWidth', 2, 'color', 'g');
-    plot(trend3{:,5},A3, 'LineWidth', 2, 'color', 'b');
+    plot(mean(trend1{:,5}), mean(trend1{:,6}), 'p', 'MarkerSize', 20, 'MarkerFaceColor', 'r', 'MarkeredgeColor', 'k')
+    plot(mean(trend2{:,5}), mean(trend2{:,6}), 'p', 'MarkerSize', 20, 'MarkerFaceColor', 'g', 'MarkeredgeColor', 'k')
+    plot(mean(trend3{:,5}), mean(trend3{:,6}), 'p', 'MarkerSize', 20, 'MarkerFaceColor', 'b', 'MarkeredgeColor', 'k')
     title(MonthNames(i), 'FontSize', 16);
     xlabel('Global Horizontal Irradiance (WH\m^2)', 'FontSize', 14);
     ylabel('Electricity From Renewable Energies', 'FontSize', 14);
